@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Re-create exercise</title>
 </head>
 
@@ -17,22 +18,28 @@
         </div>
 
         <div id="brands">
-            <span>Brands we carry -</span>
-            <span> Linus /</span>
-            <span> Brompton /</span>
-            <span> Christiania /</span>
-            <span> State</span>
+            <span class="brands">Brands we carry -</span>
+            <span class="brands"> Linus /</span>
+            <span class="brands"> Brompton /</span>
+            <span class="brands"> Christiania /</span>
+            <span class="brands"> State</span>
         </div>
 
         <article class="bike_template">
-            
+
             <div class="bike_details">
                 <img src="bike_imgs/bike_imgs/warhawk.png" class="bike_picture">
                 <h4 class="brand">State</h4>
                 <h3 class="model">Warhawk</h3>
-                <p>Price - $500</p>
-                <p>Colours- N/A</p>
-                <p>In stock - yes</p>
+                <div class="price_container">
+                    <span class="price">Price - </span><span>$500</span>
+                </div>
+                <div class="colors_container">
+                    <span class="colors">Colours - </span><span>N/A</span>
+                </div>
+                <div class="availability_container">
+                    <span class="availability">In stock - </span><span>yes</span>
+                </div>
             </div>
 
             <button>full specs</button>

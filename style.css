@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F2EFEA;
+}
+
+main {
+    margin: 3em 4em;
+}
+
+/* typography */
+
+span, h3.model {
+    font-family: 'Times New Roman', Times, serifs;
+}
+
+h3.model {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 0.8em;
+}
+
+/* bike "card */
+
+article.bike_template {
+    margin-top: 3em;
+    padding: 2em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.bike_details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bike_details img {
+    width: 100%;
+    height: auto;
+}
