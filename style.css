@@ -10,14 +10,38 @@ main {
 
 /* typography */
 
-span, h3.model {
+span.brands {
+    color: #712A23;
+}
+
+span:first-of-type, h3.model {
     font-family: 'Times New Roman', Times, serifs;
+    color: #676767;
 }
 
 h3.model {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.8em;
+    border-bottom: 1px solid #DADADA;
+}
+
+h4.brand {
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #676767;
+}
+
+.price_container span, .colors_container span, .availability_container span {
+    font-style: italic;
+}
+
+/* bike list */
+
+#bike_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 /* bike "card */
@@ -41,4 +65,19 @@ article.bike_template {
 .bike_details img {
     width: 100%;
     height: auto;
+}
+
+.price_container, .colors_container, .availability_container {
+    padding: 1em 0.5em;
+    border: 1px solid #F3F4FE;
+}
+
+button {
+    margin-top: 1.5em;
+    padding: 0.5em 1em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    background-color: transparent;
+    color: #712A23;
+    border: 1px solid #712A23;
 }

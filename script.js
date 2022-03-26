@@ -1,14 +1,27 @@
-window.addEventListener("DOMContentLoaded", init);
+const url="http://mnowak.dk/wp-bikes/wp-json/wp/v2/bike";
 
-function init() {
-    loadData();
+fetch(url)
+    .then(function(res) {
+        return res.json();
+    })
+    .then(function(data) {
+        displayBikes(data);
+    })
+
+function displayBikes(data) {
+    data.forEach(showBikes);
 }
 
-async function loadData() {
-    const response = await fetch("http://mnowak.dk/wp-bikes/wp-json/wp/v2/bike");
-    console.log("response2", response);
+function showBikes(bikes) {
+    const template = document.querySelector("#bike_template").content;
+    const clone = template.cloneNode(true);
 
-    const bikeData = await response.json();
+    clone.querySelector(".bike_details img").src = bikes.image.guid;
+    clone.querySelector(".brand").textContent = bikes.brand;
+    clone.querySelector(".model").textContent = bikes.title.rendered;
+    clone.querySelector(".price").textContent = bikes.price;
+    clone.querySelector(".colors").textContent = bikes.color;
+    clone.querySelector(".availability").textContent = bikes.availability;
 
-    displayBike(bikeData);
+    document.querySelector("#bike_list").appendChild(clone);
 }
