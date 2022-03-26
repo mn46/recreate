@@ -36,6 +36,16 @@ h4.brand {
     font-style: italic;
 }
 
+/* brands */
+
+.brands {
+    font-size: 1.8em;
+}
+
+#brands {
+    margin: 3em 0 2em 0;
+}
+
 /* bike list */
 
 #bike_list {
@@ -72,6 +82,16 @@ article.bike_template {
 .price_container, .colors_container, .availability_container {
     padding: 1em 0.5em;
     border: 1px solid #F3F4FE;
+}
+
+.colors_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.color1, .color2, .color3, .color4, .color5 {
+    width: 1em;
+    height: 1em;
 }
 
 button {
